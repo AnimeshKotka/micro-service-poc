@@ -15,5 +15,8 @@
       "apps/sample-backend",
       "apps/sample-analytics"
     ]
+  },
+  "devDependencies": {
+    "husky": "^9.1.6"
   }
 }

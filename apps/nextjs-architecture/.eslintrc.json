@@ -3,7 +3,7 @@
     "next",
     "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:storybook/recommended",
+    // "plugin:storybook/recommended",
     "prettier"
   ],
   "globals": {
@@ -11,9 +11,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "*.stories.@(ts|tsx|js|jsx|mjs|cjs)"
-      ]
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"]
     }
   ],
   "rules": {
