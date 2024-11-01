@@ -1,9 +1,30 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:storybook/recommended",
+    "prettier"
+  ],
   "globals": {
     "React": "readonly"
   },
+  "overrides": [
+    {
+      "files": [
+        "*.stories.@(ts|tsx|js|jsx|mjs|cjs)"
+      ]
+    }
+  ],
   "rules": {
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "prettier/prettier": "warn",
+    "no-console": "warn",
+    "singleQuote": true,
+    "trailingComma": "none",
+    "quoteProps": "as-needed",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "tabWidth": 2
   }
 }
