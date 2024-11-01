@@ -2,4 +2,18 @@
 echo $dir
 . "$(dirname "$0")/_/husky.sh"
 
-npm run lint
+# Commands
+CACHED_COMMAND="(git diff --stat --cached origin/$(git branch --show-current) --name-only 2> /dev/null || git diff --stat --cached origin/develop --name-only)"
+NOT_CACHED_COMMAND="(git diff --stat origin/$(git branch --show-current) --name-only 2> /dev/null || git diff --stat --cached origin/develop --name-only)"
+LINT_FRONTEND="cd ./apps/nextjs-architecture && npm run lint-stang"
+
+# LINT FRONTEND
+eval $CACHED_COMMAND | if grep --quiet "^apps/frontend"
+then
+  echo $LINT_FRONTEND
+fi;
+
+eval $NOT_CACHED_COMMAND | if grep --quiet "^apps/frontend"
+then
+  eval $LINT_FRONTEND
+fi;
