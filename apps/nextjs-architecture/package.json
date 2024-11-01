@@ -11,21 +11,33 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "next": "15.0.2",
     "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "storybook": "^8.4.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
+    "@storybook/addon-essentials": "^8.4.0",
+    "@storybook/addon-interactions": "^8.4.0",
+    "@storybook/addon-onboarding": "^8.4.0",
+    "@storybook/blocks": "^8.4.0",
+    "@storybook/nextjs": "^8.4.0",
+    "@storybook/react": "^8.4.0",
+    "@storybook/test": "^8.4.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "15.0.2",
+    "eslint-plugin-storybook": "^0.10.1",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "postcss": "^8",

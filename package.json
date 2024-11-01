@@ -13,7 +13,8 @@
     "packages": [
       "apps/sample-communication",
       "apps/sample-backend",
-      "apps/sample-analytics"
+      "apps/sample-analytics",
+      "apps/nextjs-architecture"
     ]
   },
   "devDependencies": {
