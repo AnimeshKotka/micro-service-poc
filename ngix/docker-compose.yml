@@ -1,0 +1,14 @@
+services:
+  nginx:
+    container_name: nginx-demo-1
+    image: nginx:latest
+    networks:
+      - frontend
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.nginx-http.rule=Host(nginx.server-demo-ak)
+      - traefik.http.routers.nginx-http.entrypoints=web
+    restart: unless-stopped
+networks:
+  frontend:
+    external: true 
